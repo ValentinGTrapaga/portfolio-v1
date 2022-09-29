@@ -1,11 +1,11 @@
 import React from 'react'
+import { HomeSection } from '../HomeSection'
 import ProgrammingLanguage from './../ProgrammingLanguage/index'
 import styles from './styles.module.css'
 
 const About = () => {
   return (
-    <section className={styles.aboutDiv}>
-      <h1 className={styles.aboutTitle}>About me</h1>
+    <HomeSection title={'About'}>
       <p className={styles.aboutParagraph}>
         Ever since I grew up I've been surrounded with technology and always
         being amazed by its functioning trying to understand how it worked or
@@ -31,7 +31,7 @@ const About = () => {
         more about animations and three.js. While also become a Fullstack with
         Node.JS and Mongo.
       </p>
-    </section>
+    </HomeSection>
   )
 }
 
