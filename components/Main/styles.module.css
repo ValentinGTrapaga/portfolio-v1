@@ -1,0 +1,30 @@
+.mainDiv {
+    min-height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 0px 2rem;
+}
+
+.heroDiv {
+    max-width: 50%;
+}
+
+.heroTitle {
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--text-color);
+    font-family: 'Inter Tight';
+}
+
+.heroName {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.heroImage {
+    transform: scaleX(-1);
+}

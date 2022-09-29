@@ -1,0 +1,5 @@
+.programmingLanguage {
+    color: var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+    font-size: 1.3rem;
+}
