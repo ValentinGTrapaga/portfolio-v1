@@ -2,6 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import styles from './styles.module.css'
 import { BsLink45Deg, BsGithub } from 'react-icons/bs'
+import { motion } from 'framer-motion'
 
 const Project = ({ project }) => {
   const stack = project.stack.map((tech, index) => (
@@ -13,9 +14,12 @@ const Project = ({ project }) => {
   ))
 
   return (
-    <div className={styles.projectCard}>
+    <motion.div
+      className={styles.projectCard}
+      whileHover={{ scale: 1.05, transition: { duration: 0.5 } }}>
       <div className={styles.projectImgDiv}>
         <Image
+          className={styles.projectImg}
           src={project.imageURL}
           alt={project.title}
           objectFit='cover'
@@ -46,7 +50,7 @@ const Project = ({ project }) => {
         </div>
         <div className={styles.stackDiv}>{stack}</div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

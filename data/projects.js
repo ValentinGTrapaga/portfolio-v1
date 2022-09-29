@@ -1,8 +1,17 @@
 import ExpensesImage from './../assets/expenses-screeshot.png'
 import PokedexImage from './../assets/pokedexApp-screeshot.png'
 import ShopImage from './../assets/shopApp-screeshot.png'
+import PortfolioImage from './../assets/portfolio-screeshot.png'
 
 export const projects = [
+  {
+    title: 'Portfolio',
+    stack: ['React', 'NextJS', 'HTML', 'CSS', 'Framer Motion', 'JavaScript'],
+    imageURL: PortfolioImage,
+    link: '',
+    github: 'https://github.com/ValentinGTrapaga/shop-TOP',
+    summary: 'Portfolio made with NextJS and Framer motion'
+  },
   {
     title: 'ShopApp',
     stack: [

@@ -7,20 +7,20 @@
     width: 280px;
     height: 100%;
     border-radius: 5px;
-    box-shadow: 1px 1px 10px var(--background-color2);
+    box-shadow: 2px 2px 12px var(--background-color2);
+    color: var(--text-color);
 }
 
 .projectImgDiv {
     width: 280px;
     height: 280px;
-    border-radius: inherit;
+    border-radius: 5px;
     opacity: 0.8;
 }
 
-.projectImgDiv:hover {
-    width: 280px;
-    height: 280px;
-
+.projectImg {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 .projectData {
@@ -64,12 +64,12 @@
 }
 
 .stackSpan {
-    border: 1px solid var(--accent-color);
     background-color: var(--accent-color);
-    color: var(--background-color2);
+    color: var(--text-color);
     font-weight: 700;
     border-radius: 3px;
     padding: 2px 4px;
+    box-shadow: 1px 1px 7px var(--background-color);
 }
 
 .linksDiv {
