@@ -2,10 +2,10 @@
 
 :root {
   --navIconSize: 20px;
-  --background-color: rgb(0, 3, 39);
-  --background-color2: rgb(0, 43, 99);
-  --accent-color: rgb(121, 174, 255);
-  --text-color: #eee;
+  --background-color: #0f1949;
+  --background-color2: #344682;
+  --accent-color: #557ef9;
+  --text-color: #dedfe1;
   --background-color-navBar: rgba(0, 3, 39, 0.125);
 }
 
@@ -19,7 +19,7 @@ body {
 }
 
 body {
-  background: rgb(0, 3, 39);
+  background: var(--background-color);
   color: var(--text-color);
 }
 

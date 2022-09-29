@@ -3,17 +3,24 @@
     flex-direction: column;
     align-items: center;
     justify-content: stretch;
-    background-color: var(--background-color);
+    background-color: var(--background-color2);
     width: 280px;
     height: 100%;
-    border: 1px solid var(--background-color2);
     border-radius: 5px;
     box-shadow: 1px 1px 10px var(--background-color2);
 }
 
-.projectImg {
+.projectImgDiv {
     width: 280px;
     height: 280px;
+    border-radius: inherit;
+    opacity: 0.8;
+}
+
+.projectImgDiv:hover {
+    width: 280px;
+    height: 280px;
+
 }
 
 .projectData {
@@ -21,6 +28,7 @@
     height: 100%;
     width: 100%;
     display: flex;
+    gap: 10px;
     flex-direction: column;
     justify-content: space-between;
     padding: 4px 8px;
@@ -62,4 +70,19 @@
     font-weight: 700;
     border-radius: 3px;
     padding: 2px 4px;
+}
+
+.linksDiv {
+    display: flex;
+    margin: auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.projectLink {
+    border-bottom: 1px solid var(--accent-color);
+    display: flex;
+    gap: 4px;
 }
