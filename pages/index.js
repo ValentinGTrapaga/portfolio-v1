@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Valentin's portfolio</title>
+        <title>Valentin</title>
         <meta name='Valentin' />
         <link
           rel='icon'
