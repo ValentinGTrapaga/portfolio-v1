@@ -3,6 +3,7 @@ import styles from '../styles/Home.module.css'
 import About from '../components/About'
 import Main from './../components/Main'
 import Projects from '../components/Projects'
+import { EmailForm } from '../components/EmailForm'
 
 export default function Home() {
   const handleScroll = () => {
@@ -23,6 +24,7 @@ export default function Home() {
       <Main />
       <About />
       <Projects />
+      <EmailForm />
     </>
   )
 }

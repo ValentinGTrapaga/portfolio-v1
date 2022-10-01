@@ -1,0 +1,54 @@
+.formDiv {
+    width: 50%;
+    margin: auto;
+}
+
+.form {
+    margin: 2rem 0px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.formInput:focus,
+.formTextarea:focus {
+    outline: none !important;
+}
+
+.formInput,
+.formTextarea {
+    width: 100%;
+    font-family: inherit;
+    box-sizing: border-box;
+    font-family: 'Inter Tight', sans-serif;
+    border: none;
+    font-size: 1.2rem;
+    padding: 6px 12px;
+    background-color: var(--background-color2);
+    border: 1px solid var(--background-color);
+    color: var(--text-color);
+    box-shadow: 3px -3px var(--accent-color);
+}
+
+.formTextarea {
+    height: 250px;
+    resize: none;
+}
+
+.formInput::placeholder,
+.formTextarea::placeholder {
+    color: var(--text-color);
+}
+
+.form>button {
+    padding: 8px 24px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    appearance: none;
+    color: var(--text-color);
+    background-color: var(--accent-color);
+    font-family: 'Inter Tight', sans-serif;
+    box-shadow: 3px -3px var(--background-color2);
+}
