@@ -63,3 +63,9 @@
     font-family: 'Inter Tight', sans-serif;
     box-shadow: 3px -3px var(--background-color2);
 }
+
+@media (max-width:800px) {
+    .formDiv {
+        width: 80%;
+    }
+}

@@ -23,10 +23,10 @@
 }
 
 .twinkling {
-    background-blend-mode: darken;
+    background-blend-mode: normal;
     background: transparent url(../../assets/twinkling.png) repeat top center;
     z-index: -1;
-    animation: move-twink-back 400s linear infinite;
+    animation: move-twink-back 500s linear infinite;
 }
 
 @keyframes move-twink-back {
