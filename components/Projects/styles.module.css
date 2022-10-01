@@ -1,9 +1,8 @@
 .projectsDiv {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    display: flex;
+    flex-direction: column;
     padding: 0px 1.5rem;
-    column-gap: 1rem;
-    row-gap: 3rem;
+    gap: 3rem;
     align-items: center;
     justify-content: flex-start;
     margin-bottom: 3rem;

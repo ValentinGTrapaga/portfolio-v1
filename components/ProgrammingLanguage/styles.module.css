@@ -3,3 +3,9 @@
     border-bottom: 1px solid var(--accent-color);
     font-size: 1.3rem;
 }
+
+@media (max-width:1024px) {
+    .programmingLanguage {
+        font-size: 1rem;
+    }
+}

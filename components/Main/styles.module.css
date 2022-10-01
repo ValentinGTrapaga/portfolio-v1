@@ -1,5 +1,5 @@
 .mainDiv {
-    min-height: calc(100vh - 60px);
+    height: calc(100vh - 60px);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -9,7 +9,7 @@
 }
 
 .heroDiv {
-    max-width: 50%;
+    width: 50%;
 }
 
 .heroTitle {
@@ -27,4 +27,32 @@
 
 .heroImage {
     transform: scaleX(-1);
+}
+
+@media (max-width:1023px) {
+    .mainDiv {
+        flex-direction: column;
+        justify-content: space-evenly;
+        gap: 0px;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        padding: 0px 1.4rem
+    }
+
+    .heroDiv {
+        width: 100%;
+    }
+
+    .heroTitle {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width:860px) {
+
+
+    .heroTitle {
+        font-size: 1.8rem;
+    }
 }

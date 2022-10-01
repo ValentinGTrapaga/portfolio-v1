@@ -10,15 +10,18 @@
 
 .navBar {
     max-width: 1200px;
+    margin: auto;
 }
 
 .navList {
     display: flex;
+    width: 100%;
     flex-direction: row;
-    gap: 4rem;
+    gap: 3rem;
     list-style: none;
     align-items: center;
     justify-content: flex-end;
+    padding-right: 1rem;
 }
 
 .navItem {
@@ -35,3 +38,5 @@
     width: var(--navIconSize);
     height: var(--navIconSize);
 }
+
+@media (max-width: 800px) {}

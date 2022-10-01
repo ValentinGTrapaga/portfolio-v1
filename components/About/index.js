@@ -7,7 +7,7 @@ const About = () => {
   return (
     <HomeSection title={'About'}>
       <p className={styles.aboutParagraph}>
-        Ever since I grew up I've been surrounded with technology and always
+        Ever since I grew up I have been surrounded with technology and always
         being amazed by its functioning trying to understand how it worked or
         why it did the way it did, maybe trying to get more out of it. Flashing
         a PSP, installing custom ROMs on a 3DS and modding (almost always
@@ -27,9 +27,9 @@ const About = () => {
         <ProgrammingLanguage>Firebase</ProgrammingLanguage>.
       </p>
       <p className={styles.aboutParagraph}>
-        In the future I'd like to keep growing as a frontend developer, learning
-        more about animations and three.js. While also become a Fullstack with
-        Node.JS and Mongo.
+        In the future I would like to keep growing as a frontend developer,
+        learning more about animations and three.js. While also become a
+        Fullstack with Node.JS and Mongo.
       </p>
     </HomeSection>
   )

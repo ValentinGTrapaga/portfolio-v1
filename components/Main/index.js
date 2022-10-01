@@ -17,10 +17,7 @@ export default function Main() {
           Hello 🙋🏻‍♂️
           <br></br>
           I'm
-          <span className={styles.heroName}>
-            {' '}
-            Valentin<br></br>Gonzalez Trapaga
-          </span>
+          <span className={styles.heroName}> Valentin Gonzalez Trapaga</span>
         </h1>
         <h1 className={styles.heroTitle}>
           <HeroTitle

@@ -22,9 +22,7 @@ const Project = ({ project }) => {
           className={styles.projectImg}
           src={project.imageURL}
           alt={project.title}
-          objectFit='cover'
-          height={280}
-          width={280}
+          layout='responsive'
         />
       </div>
       <div className={styles.projectData}>
