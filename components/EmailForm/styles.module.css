@@ -42,6 +42,17 @@
     color: var(--text-color);
 }
 
+.formButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4px;
+}
+
+.formArrow {
+    rotate: -45deg;
+}
+
 .form>button {
     padding: 8px 24px;
     font-size: 1.2rem;
