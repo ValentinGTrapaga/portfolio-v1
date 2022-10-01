@@ -15,8 +15,7 @@ export default function Main() {
       <div className={styles.heroDiv}>
         <h1 className={styles.heroTitle}>
           Hello 🙋🏻‍♂️
-          <br></br>
-          I'm
+          <br></br>I am
           <span className={styles.heroName}> Valentin Gonzalez Trapaga</span>
         </h1>
         <h1 className={styles.heroTitle}>
