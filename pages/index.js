@@ -6,11 +6,6 @@ import Projects from '../components/Projects'
 import { EmailForm } from '../components/EmailForm'
 
 export default function Home() {
-  const handleScroll = () => {
-    const pageHeight = window.innerHeight
-    window.scrollBy(0, pageHeight)
-  }
-
   return (
     <>
       <Head>
