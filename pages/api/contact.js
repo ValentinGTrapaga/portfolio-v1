@@ -2,19 +2,21 @@ import sgMail from '@sendgrid/mail'
 
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
-export default async (req, res) => {
-  const { email, message, fullname } = JSON.parse(req.body)
+export default async function handler(req, res) {
+  console.log(req.body)
+  const { fullname, email, message } = req.body
+
   const msg = {
-    to: 'gonzaleztrapagav@gmail.com',
-    from: email,
-    subject: 'Portfolio - New Message',
-    fullname,
-    text: message
+    to: 'valentingt22@gmail.com',
+    from: 'gonzaleztrapagav@gmail.com',
+    subject: `Portfolio - New Message`,
+    text: `- Name: ${fullname} - ContactEmail: ${email} -
+    Message: ${message}`
   }
-  try {
-    await sgMail.send(msg)
-    res.json({ message: `Email has been sent` })
-  } catch (error) {
-    res.status(500).json({ error: 'Error sending email' })
-  }
+  sgMail
+    .send(msg)
+    .then(console.log('Message sent'))
+    .catch((error) => {
+      res.status(500).json({ error: 'Error sending email' })
+    })
 }

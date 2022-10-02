@@ -21,12 +21,13 @@ export const EmailForm = () => {
     })
   }
 
-  async function handleSubmit(event, formData) {
+  async function handleSubmit(event) {
     event.preventDefault()
+    console.log(formData)
     try {
-      await fetch('/api/contact', {
+      await fetch('api/contact', {
         method: 'POST',
-        headers: { 'content-type': 'application/json' },
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
       })
       setFormData({
@@ -34,7 +35,6 @@ export const EmailForm = () => {
         email: '',
         message: ''
       })
-      alert('Email sent succesfully')
     } catch (error) {
       alert('Email not sent')
     }
@@ -52,7 +52,7 @@ export const EmailForm = () => {
             onChange={handleFormChange}
             type='text'
             placeholder='Name'
-            id='fullname'
+            name='fullname'
             value={formData.fullname}
             required></input>
           <input
@@ -60,14 +60,13 @@ export const EmailForm = () => {
             onChange={handleFormChange}
             className={styles.formInput}
             type='email'
-            id='email'
+            name='email'
             value={formData.email}
             placeholder='Email'
             pattern='[a-z0-9]+@[a-z]+\.[a-z]{2,3}'></input>
           <textarea
             required
             name='message'
-            id='message'
             onChange={handleFormChange}
             value={formData.message}
             className={styles.formTextarea}
