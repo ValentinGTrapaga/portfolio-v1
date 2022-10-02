@@ -19,7 +19,7 @@ export const NavBar = () => {
               Home
             </li>
           </Link>
-          <Link href='/resume'>
+          <Link href='https://docs.google.com/document/d/1MOP3ApkptX7hTY30woxiLmEScX_BD3q3/edit?usp=sharing&ouid=103532927219661287514&rtpof=true&sd=true'>
             <li className={styles.navItem}>
               <AiOutlineFileSearch className={styles.navIcon} />
               Resume

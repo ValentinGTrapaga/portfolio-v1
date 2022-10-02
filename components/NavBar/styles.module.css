@@ -20,7 +20,7 @@
     gap: 3rem;
     list-style: none;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding-right: 1rem;
 }
 
@@ -30,8 +30,10 @@
     gap: 6px;
     align-items: center;
     font-size: var(--navIconSize);
-    font-weight: 400;
+    font-weight: 600;
     color: var(--text-color);
+    cursor: pointer;
+    font-family: 'Inter Tight', sans-serif;
 }
 
 .navIcon {
