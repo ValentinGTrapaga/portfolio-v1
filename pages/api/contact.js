@@ -8,7 +8,7 @@ export default async function handler(req, res) {
   const msg = {
     to: 'valentingt22@gmail.com',
     from: 'gonzaleztrapagav@gmail.com',
-    subject: `Portfolio - New Message`,
+    subject: `Portfolio - New Message - ${email}`,
     text: `- Name: ${fullname} - ContactEmail: ${email} -
     Message: ${message}`
   }

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { HomeSection } from './../HomeSection/index'
 import styles from './styles.module.css'
 import { motion } from 'framer-motion'
-import { AiOutlineArrowRight, AiTwotoneEnvironment } from 'react-icons/ai'
+import { AiOutlineArrowRight } from 'react-icons/ai'
 import { arrowMotion, buttonMotion } from './animationsVariants'
 
 export const EmailForm = () => {
@@ -11,6 +11,8 @@ export const EmailForm = () => {
     email: '',
     message: ''
   })
+
+  const [sending, setSending] = useState('Send')
 
   function handleFormChange(event) {
     setFormData((prevFormData) => {
@@ -23,6 +25,7 @@ export const EmailForm = () => {
 
   async function handleSubmit(event) {
     event.preventDefault()
+    setSending('Sending...')
     const res = await fetch('api/contact', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -33,6 +36,7 @@ export const EmailForm = () => {
       email: '',
       message: ''
     })
+    setSending('Send')
     const error = await res.json()
     if (error) {
       console.log(error)
@@ -63,7 +67,7 @@ export const EmailForm = () => {
             name='email'
             value={formData.email}
             placeholder='Email'
-            pattern='[a-z0-9]+@[a-z]+\.[a-z]{2,3}'></input>
+            pattern='[a-z0-9]+@[a-z]+\.[a-z]{2,3}+\.[a-z]{2,3}'></input>
           <textarea
             required
             name='message'
@@ -75,7 +79,7 @@ export const EmailForm = () => {
             whileHover='hover'
             variants={buttonMotion}
             className={styles.formButton}>
-            Send
+            {sending}
             <motion.span variants={arrowMotion}>
               <AiOutlineArrowRight className={styles.formArrow} />
             </motion.span>
