@@ -3,7 +3,6 @@ import sgMail from '@sendgrid/mail'
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 export default async function handler(req, res) {
-  console.log(req.body)
   const { fullname, email, message } = req.body
 
   const msg = {
@@ -13,10 +12,11 @@ export default async function handler(req, res) {
     text: `- Name: ${fullname} - ContactEmail: ${email} -
     Message: ${message}`
   }
-  sgMail
-    .send(msg)
-    .then(console.log('Message sent'))
-    .catch((error) => {
-      res.status(500).json({ error: 'Error sending email' })
-    })
+
+  try {
+    await sgMail.send(msg)
+  } catch (error) {
+    return res.status(error.statusCode || 500).json({ error: error.message })
+  }
+  return res.status(200).json({ error: '' })
 }

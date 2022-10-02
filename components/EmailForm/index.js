@@ -23,20 +23,20 @@ export const EmailForm = () => {
 
   async function handleSubmit(event) {
     event.preventDefault()
-    console.log(formData)
-    try {
-      await fetch('api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
-      })
-      setFormData({
-        fullname: '',
-        email: '',
-        message: ''
-      })
-    } catch (error) {
-      alert('Email not sent')
+    const res = await fetch('api/contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData)
+    })
+    setFormData({
+      fullname: '',
+      email: '',
+      message: ''
+    })
+    const error = await res.json()
+    if (error) {
+      console.log(error)
+      return
     }
   }
 
