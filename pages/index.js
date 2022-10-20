@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
 import About from '../components/About'
 import Main from './../components/Main'
 import Projects from '../components/Projects'
@@ -13,7 +12,7 @@ export default function Home() {
         <meta name='Valentin' />
         <link
           rel='icon'
-          href='/favicon.ico'
+          href='./favicon.ico'
         />
       </Head>
       <Main />

@@ -16,7 +16,7 @@ const Project = ({ project }) => {
   return (
     <motion.div
       className={styles.projectCard}
-      whileHover={{ scale: 1.05, transition: { duration: 0.5 } }}>
+      whileHover={{ scale: 1.05, transition: { duration: 0.25 } }}>
       <div className={styles.projectImgDiv}>
         <Image
           className={styles.projectImg}
