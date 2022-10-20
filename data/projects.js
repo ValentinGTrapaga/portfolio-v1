@@ -1,7 +1,7 @@
-import ExpensesImage from './../assets/expenses-screeshot.png'
-import PokedexImage from './../assets/pokedexApp-screeshot.png'
-import ShopImage from './../assets/shopApp-screeshot.png'
-import PortfolioImage from './../assets/portfolio-screeshot.png'
+import ExpensesImage from './../assets/expenses-screenshot.png'
+import PokedexImage from './../assets/pokedex.gif'
+import ShopImage from './../assets/shop.gif'
+import PortfolioImage from './../assets/portfolio-screenshot.png'
 
 export const projects = [
   {
@@ -32,12 +32,19 @@ export const projects = [
   },
   {
     title: 'PokedexApp',
-    stack: ['React', 'PokeAPI', 'HTML', 'CSS', 'RESTAPI', 'JavaScript'],
+    stack: [
+      'React',
+      'PokeAPI',
+      'HTML',
+      'Tailwind CSS',
+      'RESTAPI',
+      'JavaScript'
+    ],
     imageURL: PokedexImage,
-    link: 'https://pokedex-react-pi.vercel.app/',
-    github: 'https://github.com/ValentinGTrapaga/pokedex-react',
+    link: 'https://pokedex-nextjs-valentingtrapaga.vercel.app/',
+    github: 'https://github.com/ValentinGTrapaga/pokedex-nextjs',
     summary:
-      'PokedexApp to learn API calls and JSON handling. Possible improvements: Home with every pokemon and a route for each one to the stats, evolutions, abilities; animations with framer motion.'
+      'PokedexApp to learn API calls, JSON handling, pagination. Made with Tailwind CSS and NextJS. This project was particularly difficult because of the rendering of the evolution chain, since it was an evolution inside another with its details in it. I am particularly proud of the function made to fetch and format the data'
   },
   {
     title: 'Expenses chart',
