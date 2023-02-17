@@ -6,7 +6,7 @@ import styles from './styles.module.css'
 const About = () => {
   return (
     <HomeSection title={'About'}>
-      <div>
+      <div className={styles.aboutDiv}>
         <p className={styles.aboutParagraph}>
           Ever since I grew up I have been surrounded with technology and always
           being amazed by its functioning trying to understand how it worked or

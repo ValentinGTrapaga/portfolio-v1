@@ -20,7 +20,7 @@
   position: relative;
   display: block;
   box-shadow: 6px -6px var(--accent-color);
-  border: 1px solid var(--background-color2);
+  border: 1px solid var(--text-color-email);
 }
 
 .projectData {
@@ -65,11 +65,11 @@
 
 .stackSpan {
   background-color: var(--text-color);
-  color: var(--background-color2);
+  color: var(--background-color);
   font-weight: 700;
-  border-radius: 3px;
+  border-radius: 2px;
   padding: 2px 4px;
-  box-shadow: 1px 1px 7px var(--background-color);
+  box-shadow: 2px -2px 1px var(--accent-color);
 }
 
 .linksDiv {

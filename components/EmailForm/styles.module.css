@@ -26,6 +26,7 @@
     border: none;
     font-size: 1.2rem;
     padding: 6px 12px;
+    color: var(--text-color-email);
     background-color: var(--background-color2);
     border: 1px solid var(--background-color);
     color: var(--text-color);
@@ -35,11 +36,12 @@
 .formTextarea {
     height: 250px;
     resize: none;
+    color: var(--text-color-email);
 }
 
 .formInput::placeholder,
 .formTextarea::placeholder {
-    color: var(--text-color);
+    color: var(--text-color-email);
 }
 
 .formButton {

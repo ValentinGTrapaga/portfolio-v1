@@ -2,10 +2,11 @@
 
 :root {
   --navIconSize: 20px;
-  --background-color: #0f1949;
-  --background-color2: #344682;
-  --accent-color: #557ef9;
-  --text-color: #dedfe1;
+  --background-color: #161315;
+  --background-color2: #dfcd9c;
+  --accent-color: #a0292f;
+  --text-color: #ddc4af;
+  --text-color-email: #250606;
   --background-color-navBar: rgba(0, 3, 39, 0.125);
 }
 

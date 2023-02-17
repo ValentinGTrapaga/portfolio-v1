@@ -16,21 +16,17 @@ export default function Main() {
         <h1 className={styles.heroTitle}>
           Hello 🙋🏻‍♂️
           <br></br>I am
-          <span className={styles.heroName}> Valentin Gonzalez Trapaga</span>
+          <span className={styles.heroName}> Valentin Gonzalez Trapaga</span>,
         </h1>
         <h1 className={styles.heroTitle}>
           <HeroTitle
-            stringsToType={['React Developer.', 'Frontend developer.']}
+            stringsToType={[
+              'a React Developer.',
+              'a Frontend developer.',
+              'a FullStack developer'
+            ]}
           />
         </h1>
-      </div>
-      <div>
-        <Image
-          src={DevHome}
-          alt='Developer coding image'
-          height={400}
-          className={styles.heroImage}
-        />
       </div>
     </motion.div>
   )
