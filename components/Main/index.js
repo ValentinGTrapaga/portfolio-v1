@@ -18,15 +18,7 @@ export default function Main() {
           <br></br>I am
           <span className={styles.heroName}> Valentin Gonzalez Trapaga</span>,
         </h1>
-        <h1 className={styles.heroTitle}>
-          <HeroTitle
-            stringsToType={[
-              'a React Developer.',
-              'a Frontend developer.',
-              'a FullStack developer'
-            ]}
-          />
-        </h1>
+        <h1 className={styles.heroTitle}>a React Developer.</h1>
       </div>
     </motion.div>
   )

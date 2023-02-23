@@ -14,7 +14,7 @@
 
 .heroTitle {
     text-align: center;
-    font-size: 3.5rem;
+    font-size: 3.8rem;
     font-weight: 700;
     letter-spacing: 1px;
     color: var(--text-color);
@@ -46,7 +46,7 @@
     }
 
     .heroTitle {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
     }
 }
 
@@ -54,6 +54,6 @@
 
 
     .heroTitle {
-        font-size: 1.8rem;
+        font-size: 3rem;
     }
 }
