@@ -3,6 +3,7 @@ import About from '../components/About'
 import Main from './../components/Main'
 import Projects from '../components/Projects'
 import { EmailForm } from '../components/EmailForm'
+import ChatBot from '../components/ChatBot'
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <About />
       <Projects />
       <EmailForm />
+      <ChatBot />
     </>
   )
 }
