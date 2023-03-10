@@ -6,9 +6,12 @@ const ChatBot = () => {
     {
       isAI: true,
       message:
-        "Hello, I'm a bot prepared to answer some questions about Valentin, feel free to ask me anything, I'll do my best to answer it"
+        "Hello, I'm a bot prepared to answer some questions about Valentin, feel free to ask me anything, I'll do my best to answer it. Keep in mind I'm being trained. Any answer given does not have to be completely true."
     }
   ])
+
+  const [loading, setLoading] = useState(false)
+  const [showChat, setShowChat] = useState(true)
 
   const inputRef = useRef(null)
   const container = useRef(null)
@@ -31,35 +34,41 @@ const ChatBot = () => {
   async function handleSubmit(e) {
     e.preventDefault()
     const userMessage = e.target.userMessage.value
-    console.log(userMessage)
+    setLoading(true)
     const personMessage = {
       isAI: false,
       message: userMessage
     }
     setMessages((prevMessages) => [...prevMessages, personMessage])
+    inputRef.current.value = ''
     inputRef.current.disabled = true
     const res = await fetch('api/chatbot', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(userMessage)
     })
-    inputRef.current.value = ''
-    const data = await res.json()
+
+    const { data } = await res.json()
     const AIMessage = {
       isAI: true,
-      message: data.data
+      message: data
     }
     setMessages((prevMessages) => [...prevMessages, AIMessage])
+    setLoading(false)
     inputRef.current.disabled = false
-    console.log(inputRef.current.scrollHeight)
     container.current.scrollTo(0, inputRef.current.scrollHeight)
     inputRef.current.focus()
   }
 
-  return (
+  return showChat ? (
     <div
       className={styles.chatBotDiv}
       ref={container}>
+      <button
+        onClick={() => setShowChat(!showChat)}
+        className={styles.closeChatBtn}>
+        Close chat
+      </button>
       <section className={styles.chatBotMessages}>
         {messages.map(({ isAI, message }, index) => (
           <p
@@ -79,9 +88,23 @@ const ChatBot = () => {
           type='text'
           name='userMessage'
         />
-        <button className={styles.submitButton}>Send</button>
+        {!loading ? (
+          <button className={styles.submitButton}>Send</button>
+        ) : (
+          <button
+            className={styles.submitButton}
+            disabled>
+            ...
+          </button>
+        )}
       </form>
     </div>
+  ) : (
+    <button
+      onClick={() => setShowChat(!showChat)}
+      className={styles.showChatBtn}>
+      Show chat
+    </button>
   )
 }
 

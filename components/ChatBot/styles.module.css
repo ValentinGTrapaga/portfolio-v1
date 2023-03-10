@@ -4,14 +4,15 @@
     right: 25px;
     border: 1px solid var(--text-color);
     background-color: var(--background-color);
-    box-shadow: 6px 6px var(--accent-color);
-    width: 30vw;
+    box-shadow: 4px 4px var(--accent-color);
+    max-width: 500px;
     max-height: 45vh;
     display: flex;
     align-items: baseline;
     flex-direction: column;
     gap: 0.625rem;
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .chatBotDiv::-webkit-scrollbar {
@@ -53,7 +54,7 @@
 
 .formDiv {
     width: 100%;
-    padding: 0px 0.5rem;
+    padding: 0.5rem 0.5rem;
     gap: 0.5rem;
     display: flex;
     flex-direction: row;
@@ -64,6 +65,9 @@
     background-color: var(--accent-color);
     padding: 6px 12px;
     height: 100%;
+    width: 50px;
+    font-weight: 700;
+    text-align: center;
 }
 
 .textInput {
@@ -74,4 +78,30 @@
     padding: 4px;
     text-align: right;
     overflow-wrap: break-word;
+}
+
+.closeChatBtn {
+    all: unset;
+    padding: 4px 6px;
+    background-color: var(--accent-color);
+    align-self: flex-end;
+    margin: 2px;
+}
+
+.showChatBtn {
+    all: unset;
+    padding: 4px 6px;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    border: 1px solid var(--background-color);
+    box-shadow: 4px 4px var(--accent-color);
+}
+
+@media (max-width:550px) {
+    .chatBotDiv {
+        width: 90vw;
+    }
 }
