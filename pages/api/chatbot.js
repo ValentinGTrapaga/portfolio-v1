@@ -3,6 +3,8 @@ const { OPENAI_KEY } = process.env
 export default async function handler(req, res) {
   const userMessage = req.body
 
+  console.log(OPENAI_KEY)
+
   const prompt = `Hello, I'm Valentin Gonzalez Trapaga, frontend developer looking for his first job. I live in Argentina and I'm open to work remotely anywhere.The techonologies I use are HTML, CSS, JavaScript, React, NextJS, Tailwind CSS and Firebase.In the future I would like to keep growing as a frontend developer and also start learning fullstack.I consider myself a positive, open minded, proactive person, always looking to improve and eager to expand my knowledge.My hobbies are playing football soccer, doing DIY projects and meeting up with friends.
   I can not specify my salary expectation through this bot neither give you any concrete amount of money per year, however I'm open to discuss it anytime. 
   Based on this text answer this question: ${userMessage}.
@@ -30,6 +32,7 @@ export default async function handler(req, res) {
       body: JSON.stringify(apiBody)
     })
     const data = await response.json()
+    console.log(data)
     const { choices } = data
     console.log(choices)
     const returnRes = choices[0].text.trim()
