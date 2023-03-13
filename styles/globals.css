@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Noto+Sans:wght@100;400;500;600;700');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 :root {
   --navIconSize: 20px;
-  --background-color: #161315;
-  --background-color2: #dfcd9c;
-  --accent-color: #a0292f;
-  --text-color: #ddc4af;
+  --background-color: #21295C;
+  --background-color2: #c3e5ff;
+  --accent-color: #7CC6FE;
+  --text-color: #F4FAFF;
   --text-color-email: #250606;
   --background-color-navBar: rgba(0, 3, 39, 0.125);
 }
@@ -15,7 +16,7 @@ body {
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
-  font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: 'Monstserrat', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
