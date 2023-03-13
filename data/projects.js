@@ -19,7 +19,7 @@ export const projects = [
     link: 'https://shop-top-rose.vercel.app/',
     github: 'https://github.com/ValentinGTrapaga/shop-TOP',
     summary:
-      'Shopping SPA with a home page and shopping cart capability. Keeping through the context hook the shopping cart items.'
+      'The Shopping Application is an e-commerce solution that features a Home Page with a collection of products and a Shopping Cart capability. The application uses Context Hook to maintain and update the shopping cart items dynamically, providing users with a smooth and seamless shopping experience'
   },
   {
     title: 'PokedexApp',
