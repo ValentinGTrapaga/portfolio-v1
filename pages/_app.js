@@ -1,5 +1,5 @@
 import AppLayout from '../components/AppLayout'
-import { NavBar } from '../components/NavBar'
+import ChatBot from './../components/ChatBot/index'
 import '../styles/globals.css'
 
 function MyApp({ Component, pageProps }) {
@@ -7,6 +7,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <AppLayout>
         <Component {...pageProps} />
+        <ChatBot />
       </AppLayout>
     </>
   )

@@ -1,3 +1,5 @@
+const { OPENAI_KEY } = process.env
+
 export default async function handler(req, res) {
   const userMessage = req.body
 
@@ -23,7 +25,7 @@ export default async function handler(req, res) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        Authorization: `Bearer ${process.env.OPEN_AI_KEY}`
+        Authorization: `Bearer ${OPENAI_KEY}`
       },
       body: JSON.stringify(apiBody)
     })

@@ -13,8 +13,8 @@ const ChatBot = () => {
   const [loading, setLoading] = useState(false)
   const [showChat, setShowChat] = useState(true)
 
-  const inputRef = useRef(null)
-  const container = useRef(null)
+  const inputRef = useRef()
+  const container = useRef()
 
   const pStyleAI = {
     alignSelf: 'flex-start',
@@ -60,15 +60,25 @@ const ChatBot = () => {
     inputRef.current.focus()
   }
 
+  useEffect(() => {
+    container.current?.scrollTo(0, container.current.scrollHeight)
+    if (showChat) {
+      inputRef.current.focus()
+    }
+  }, [messages, showChat])
+
   return showChat ? (
     <div
       className={styles.chatBotDiv}
       ref={container}>
-      <button
-        onClick={() => setShowChat(!showChat)}
-        className={styles.closeChatBtn}>
-        Close chat
-      </button>
+      <div className={styles.chatBotTitleDiv}>
+        <h4>Chatbot</h4>
+        <button
+          onClick={() => setShowChat(!showChat)}
+          className={styles.closeChatBtn}>
+          ×
+        </button>
+      </div>
       <section className={styles.chatBotMessages}>
         {messages.map(({ isAI, message }, index) => (
           <p
@@ -89,12 +99,12 @@ const ChatBot = () => {
           name='userMessage'
         />
         {!loading ? (
-          <button className={styles.submitButton}>Send</button>
+          <button className={styles.submitButton}>↩</button>
         ) : (
           <button
             className={styles.submitButton}
             disabled>
-            ...
+            …
           </button>
         )}
       </form>
@@ -103,7 +113,7 @@ const ChatBot = () => {
     <button
       onClick={() => setShowChat(!showChat)}
       className={styles.showChatBtn}>
-      Show chat
+      ?
     </button>
   )
 }
