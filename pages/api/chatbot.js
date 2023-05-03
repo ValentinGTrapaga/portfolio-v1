@@ -2,17 +2,17 @@ export default async function handler(req, res) {
   const { COHERE_KEY } = process.env
   const userMessage = req.body
 
-  const prompt = `Hello, I'm Valentin Gonzalez Trapaga, frontend developer looking for his first job. I live in Argentina and I'm open to work remotely anywhere.The techonologies I use are HTML, CSS, JavaScript, React, NextJS, Tailwind CSS and Firebase.In the future I would like to keep growing as a frontend developer and also start learning fullstack web development.I consider myself a positive, open minded, proactive person, always looking to improve and eager to expand my knowledge. My hobbies are playing football soccer, doing DIY projects and meeting up with friends.
-  You can contact me thorugh my email: gonzaleztrapagav@gmail.com or my GitHub: https://github.com/ValentinGTrapaga
+  const prompt = `This is a presentation text about me: I'm Valentin Gonzalez Trapaga, frontend developer looking for his first job. I live in Argentina and I'm open to work remotely anywhere.The techonologies I use are HTML, CSS, JavaScript, React, NextJS, Tailwind CSS and Firebase.In the future I would like to keep growing as a frontend developer and also start learning fullstack web development.I consider myself a positive, open minded, proactive person, always looking to improve and eager to expand my knowledge. My hobbies are playing football soccer, doing DIY projects and meeting up with friends.
+  You can contact me through my email: gonzaleztrapagav@gmail.com or my GitHub: https://github.com/ValentinGTrapaga
   I can not specify my salary expectation through this bot neither give you any concrete amount of money per year, however I'm open to discuss it anytime. 
-  Based on this text answer this question as if you were this person: ${userMessage}.
+  Based on this text act as if you were this person and answer this question: ${userMessage}.
   `
 
   const apiBody = {
     model: "command-xlarge-nightly",
     prompt: prompt,
-    max_tokens: 1256,
-    temperature: 0.65,
+    max_tokens: 512,
+    temperature: 0.75,
     k: 0,
     stop_sequences: [],
     return_likelihoods: "NONE"
@@ -30,8 +30,6 @@ export default async function handler(req, res) {
       body: JSON.stringify(apiBody)
     })
     const data = await response.json()
-    console.log({COHERE_KEY})
-    console.log({data})
     const returnData = data.generations[0].text
     console.log(returnData)
 
