@@ -30,6 +30,8 @@ export default async function handler(req, res) {
       body: JSON.stringify(apiBody)
     })
     const data = await response.json()
+    console.log({COHERE_KEY})
+    console.log({data})
     const returnData = data.generations[0].text
     console.log(returnData)
 
