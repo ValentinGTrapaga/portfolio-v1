@@ -1,8 +1,27 @@
 import ExpensesImage from './../assets/expenses-screenshot.png'
 import PokedexImage from './../assets/pokedex.gif'
 import ShopImage from './../assets/shop.gif'
+import EscuchaderoImage from './../assets/escuchadero.jpg'
 
 export const projects = [
+  {
+    title: 'Escuchadero',
+    stack: [
+      'React',
+      'ReactRouter',
+      'HTML',
+      'CSS',
+      'Context API',
+      'JavaScript',
+      'Firebase',
+      'Styled-components'
+    ],
+    imageURL: EscuchaderoImage,
+    link: 'https://c10-58-m-reactchallenge-mern.vercel.app//',
+    github: 'https://github.com/No-Country/c10-58-m-reactchallenge-mern',
+    summary:
+      'An application dedicated to connecting mental health professionals with clients in need. Developed in React with React Router. Responsible for database development and authentication with Firebase, as well as development of appointment scheduling components, Home page, user profile following a design based on a Figma file. WebApp done as a joint project for No Country.'
+  },
   {
     title: 'ShopApp',
     stack: [
