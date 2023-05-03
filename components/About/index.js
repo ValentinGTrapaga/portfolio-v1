@@ -34,10 +34,11 @@ const About = () => {
         </p>
         <p className={styles.aboutParagraph}>
           The techonologies I use are{' '}
-          <ProgrammingLanguage>Next.JS</ProgrammingLanguage>,{' '}
-          <ProgrammingLanguage>React</ProgrammingLanguage>,{' '}
           <ProgrammingLanguage>JavaScript</ProgrammingLanguage>,{' '}
+          <ProgrammingLanguage>React</ProgrammingLanguage>,{' '}
+          <ProgrammingLanguage>Next.JS</ProgrammingLanguage>,{' '}
           <ProgrammingLanguage>Tailwind CSS</ProgrammingLanguage> and{' '}
+          <ProgrammingLanguage>Styled-components</ProgrammingLanguage> and{' '}
           <ProgrammingLanguage>Firebase</ProgrammingLanguage>.
         </p>
       </div>
