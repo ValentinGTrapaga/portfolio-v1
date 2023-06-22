@@ -14,7 +14,7 @@ export const EmailForm = () => {
 
   const [sending, setSending] = useState('Send')
 
-  function handleFormChange(event) {
+  function handleFormChange (event) {
     setFormData((prevFormData) => {
       return {
         ...prevFormData,
@@ -23,7 +23,7 @@ export const EmailForm = () => {
     })
   }
 
-  async function handleSubmit(event) {
+  async function handleSubmit (event) {
     event.preventDefault()
     setSending('Sending...')
     const res = await fetch('api/contact', {
